@@ -178,10 +178,8 @@ model-viewer > #ar-prompt > img {
   }
 }
 
-@media screen and (max-width: 440px) {
-  .hotspot-detail {
-    width: 180px;
-    height: auto;
-    left: 0;
+@media screen and (min-width: 560px) {
+  .Hotspot {
+    display: block;
   }
 }

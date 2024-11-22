@@ -3,6 +3,9 @@
   const canvas = document.querySelector("#explode-view");
   const context = canvas.getContext("2d");
 
+  const divisor = document.querySelector("#divisor");
+  const slider = document.querySelector("#slider");
+
   canvas.width = 1920;
   canvas.height = 1080;
 
@@ -95,6 +98,15 @@
   }
 
   loadInfo();
+
+  // Slider
+
+  function moveDivisor() {
+    console.log(slider.value);
+    divisor.style.width = slider.value + "%";
+  }
+
+  slider.addEventListener("input", moveDivisor);
 
   hotspots.forEach(function (hotspot) {
     hotspot.addEventListener("mouseenter", showInfo);
