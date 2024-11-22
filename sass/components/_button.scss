@@ -1,0 +1,23 @@
+#preorder-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+  color: black;
+  background-color: lightgray;
+}
+
+#preorder-btn:hover {
+  background-color: rgb(255, 175, 0);
+}
+
+@media screen and (min-width: 570px) {
+  #preorder-btn {
+    width: 450px;
+    font-size: 1.5rem;
+  }
+}
