@@ -16,6 +16,7 @@ model-viewer {
   position: relative;
   transition: opacity 0.3s;
   width: 24px;
+  display: none;
 }
 
 .Hotspot:hover {

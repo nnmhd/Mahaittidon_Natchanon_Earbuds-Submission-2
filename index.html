@@ -9,62 +9,99 @@
   </head>
   <body>
     <h1 class="hidden">SONY WalkBack 1979 Site is here</h1>
-    <section id="site">
-      <div id="brandLogo">
+    <section id="site" class="grid-con">
+      <div id="brandLogo" class="col-span-full">
         <img src="./images/sony-logo.png" alt="" />
         <img src="./images/walkman-1979-logo.png" alt="" />
       </div>
-      <div id="copy">©nate2024</div>
-      <model-viewer
-        id="model"
-        src="model/earbud-web.gltf"
-        ar
-        ar-modes="webxr scene-viewer quick-look"
-        camera-controls
-        tone-mapping="neutral"
-        poster=""
-        shadow-intensity="0">
-        <!-- H1 -->
-        <button
-          class="Hotspot"
-          slot="hotspot-1"
-          data-position="0.36111772536858755m 11.182242955788603m 2.052378836894199m"
-          data-normal="-0.6928201536009984m -0.08902258668611979m 0.7155943081271687m"
-          data-visibility-attribute="visible">
-          <div id="hotspot-1" class="hotspot-detail"></div>
-        </button>
-        <!-- H2 -->
-        <button
-          class="Hotspot"
-          slot="hotspot-2"
-          data-position="1.9678896490933973m 5.531976255475318m -3.904167266164881m"
-          data-normal="-0.8896307633621282m 0.02036428027503139m 0.4562262607178562m"
-          data-visibility-attribute="visible">
-          <div id="hotspot-2" class="hotspot-detail"></div>
-        </button>
-        <!-- H3 -->
-        <button
-          class="Hotspot"
-          slot="hotspot-3"
-          data-position="0.19194346901300863m 7.415176063878083m 1.083612814779451m"
-          data-normal="-0.6928201536009984m -0.08902258668611979m 0.7155943081271687m"
-          data-visibility-attribute="visible">
-          <div id="hotspot-3" class="hotspot-detail"></div>
-        </button>
+      <div id="copy" class="col-span-full">©nate2024</div>
+      <article id="text" class="col-span-full">
+        <h2>45 years later, First Walkman 1979 walks back sleeker.</h2>
+      </article>
+      <div id="model-box" class="col-span-full">
+        <model-viewer
+          id="model"
+          src="model/earbud-web.gltf"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          tone-mapping="neutral"
+          poster=""
+          shadow-intensity="0">
+          <!-- H1 -->
+          <button
+            class="Hotspot"
+            slot="hotspot-1"
+            data-position="0.36111772536858755m 11.182242955788603m 2.052378836894199m"
+            data-normal="-0.6928201536009984m -0.08902258668611979m 0.7155943081271687m"
+            data-visibility-attribute="visible">
+            <div id="hotspot-1" class="hotspot-detail"></div>
+          </button>
+          <!-- H2 -->
+          <button
+            class="Hotspot"
+            slot="hotspot-2"
+            data-position="1.9678896490933973m 5.531976255475318m -3.904167266164881m"
+            data-normal="-0.8896307633621282m 0.02036428027503139m 0.4562262607178562m"
+            data-visibility-attribute="visible">
+            <div id="hotspot-2" class="hotspot-detail"></div>
+          </button>
+          <!-- H3 -->
+          <button
+            class="Hotspot"
+            slot="hotspot-3"
+            data-position="0.19194346901300863m 7.415176063878083m 1.083612814779451m"
+            data-normal="-0.6928201536009984m -0.08902258668611979m 0.7155943081271687m"
+            data-visibility-attribute="visible">
+            <div id="hotspot-3" class="hotspot-detail"></div>
+          </button>
 
-        <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-        </div>
-        <button slot="ar-button" id="ar-button">View in your space</button>
+          <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">View in your space</button>
 
-        <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
+          <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+          </div>
+          <div id="ar-prompt">
+            <img src="model/ar_hand_prompt.png" />
+          </div>
+        </model-viewer>
+      </div>
+      <div id="features" class="col-span-full">
+        <div id="feature-1" class="feature-box">
+          <video src="./video/battery.mp4" autoplay loop></video>
+          <h2>A good day!</h2>
+          <p>24 hours of battery life.</p>
         </div>
-        <div id="ar-prompt">
-          <img src="model/ar_hand_prompt.png" />
+        <div id="feature-2" class="feature-box">
+          <video src="./video/wheeling.mp4" autoplay loop></video>
+          <h2>We wheel rock you!</h2>
+          <p>Wheel control.</p>
         </div>
-      </model-viewer>
+        <div id="feature-3" class="feature-box">
+          <video src="./video/tapping.mp4" autoplay loop></video>
+          <h2>This is the tap!</h2>
+          <p>Tap to play.</p>
+        </div>
 
+        <div id="story">
+          <p>
+            Marking 45 years since Sony's iconic TPS-L2, Walkback 1979
+            reimagines the first Walkman as retro-inspired wireless earbuds.
+            Timeless design meets modern sound—perfect for classics or new
+            beats. Relive the legacy in style!
+          </p>
+        </div>
+      </div>
+
+      <div id="video" class="col-span-full">
+        <canvas id="explode-view"></canvas>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
       <script src="js/main.js"></script>
       <script
         type="module"
