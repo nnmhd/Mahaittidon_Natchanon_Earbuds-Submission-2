@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <title>SONY WalkBack 1979</title>
   </head>
@@ -22,8 +28,13 @@
       </h2>
       <div id="container" class="grid-con">
         <article id="text" class="col-span-full">
-          <h2>45 years later, First Walkman 1979 walks back sleeker.</h2>
-          <a id="preorder-btn" href="preorder.html">Pre-Order</a>
+          <h2 class="reveal-text">
+            45 years later, First Walkman 1979 <br />
+            walks back sleeker.
+          </h2>
+          <a id="preorder-btn" href="preorder.html"
+            >Reserve your time capsule
+          </a>
         </article>
         <div id="model-box" class="col-span-full">
           <model-viewer
@@ -36,14 +47,16 @@
             camera-controls
             tone-mapping="neutral"
             poster=""
-            shadow-intensity="0">
+            shadow-intensity="0"
+          >
             <!-- H1 -->
             <button
               class="Hotspot"
               slot="hotspot-1"
               data-position="0.36111772536858755m 11.182242955788603m 2.052378836894199m"
               data-normal="-0.6928201536009984m -0.08902258668611979m 0.7155943081271687m"
-              data-visibility-attribute="visible">
+              data-visibility-attribute="visible"
+            >
               <div id="hotspot-1" class="hotspot-detail"></div>
             </button>
             <!-- H2 -->
@@ -52,7 +65,8 @@
               slot="hotspot-2"
               data-position="1.9678896490933973m 5.531976255475318m -3.904167266164881m"
               data-normal="-0.8896307633621282m 0.02036428027503139m 0.4562262607178562m"
-              data-visibility-attribute="visible">
+              data-visibility-attribute="visible"
+            >
               <div id="hotspot-2" class="hotspot-detail"></div>
             </button>
             <!-- H3 -->
@@ -61,7 +75,8 @@
               slot="hotspot-3"
               data-position="0.19194346901300863m 7.415176063878083m 1.083612814779451m"
               data-normal="-0.6928201536009984m -0.08902258668611979m 0.7155943081271687m"
-              data-visibility-attribute="visible">
+              data-visibility-attribute="visible"
+            >
               <div id="hotspot-3" class="hotspot-detail"></div>
             </button>
 
@@ -78,6 +93,7 @@
             </div>
           </model-viewer>
         </div>
+
         <div id="features" class="col-span-full">
           <div id="feature-1" class="feature-box">
             <video src="./video/battery.mp4" autoplay loop></video>
@@ -94,17 +110,13 @@
             <h2>This is the tap!</h2>
             <p>Tap to play.</p>
           </div>
-
-          <div id="story">
-            <p>
-              Marking 45 years since Sony's iconic TPS-L2, Walkback 1979
-              reimagines the first Walkman as retro-inspired wireless earbuds.
-              Timeless design meets modern sound—perfect for classics or new
-              beats. Relive the legacy in style!
-            </p>
-          </div>
         </div>
 
+        <article id="product-text" class="col-span-full">
+          Where nostalgia meets next-gen audio. Reimagined from the iconic
+          Walkman, the WB-1979 blends retro soul with modern clarity. Vintage
+          vibes on the outside, cutting-edge tech on the inside.
+        </article>
         <div id="xray-box" class="col-span-full">
           <div id="comparison-con">
             <div id="xray">
@@ -118,20 +130,32 @@
           </div>
         </div>
       </div>
-
+      <div id="story">
+        <p>
+          WalkBack 1979 isn’t just wireless earbuds—it’s a time machine for your
+          ears. Power through your day with 24 hours of battery life, switch
+          tracks with the iconic wheel control, and launch your soundtrack
+          instantly with a simple tap. Retro vibes. Modern edge. 100% legendary.
+        </p>
+      </div>
       <div id="video" class="col-span-full">
         <video src="../video/video.mp4" controls autoplay></video>
         <canvas id="explode-view"></canvas>
       </div>
     </section>
     <footer>
-      <div id="copy">©nate2024</div>
+      <div id="copy"><h2>The Past is coming, Soon 2025</h2></div>
+      <a id="preorder-btn" href="preorder.html">Reserve your time capsule </a>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script type="module" src="js/main.js"></script>
     <script
       type="module"
-      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
   </body>
 </html>
