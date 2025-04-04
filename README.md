@@ -28,7 +28,7 @@ The project is built with the following technologies:
 1.  Clone the repository:
 
     ```bash
-    git clone https://github.com/username/sony-walkback-1979-ar-minisite.git
+    git clone https://github.com/nnmhd/walkback-ar-model.git
     ```
 
 2.  Open the project folder.
